@@ -1,0 +1,26 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "extends": [
+    "airbnb-base",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    }
+  },
+  "rules": {
+    "import/prefer-default-export": "off",
+    "@typescript-eslint/indent": [
+      "error",
+      2
+    ]
+  },
+}

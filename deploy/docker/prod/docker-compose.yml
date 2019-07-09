@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+
+  postgres:
+    image: postgres:11.1
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=typescript_express_ddd_example_db
+    volumes:
+      - ../../../scripts/initdb.sh:/docker-entrypoint-initdb.d/initdb.sh
+    ports:
+      - 5432
+    expose:
+      - 5432
+
+  server:
+    build:
+      context: ../../../
+      dockerfile: ./deploy/docker/prod/Dockerfile
+    image: typescript-express-ddd-example:latest
+    environment:
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PORT=5432
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=typescript_express_ddd_example_db
+      - POSTGRES_SCHEMA=public
+    depends_on:
+      - postgres
+    ports:
+      - 8080:8080

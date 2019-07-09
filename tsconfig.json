@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "noEmit": true,
+    "pretty": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "target": "esnext",
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+    }
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

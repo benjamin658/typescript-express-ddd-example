@@ -1,0 +1,9 @@
+apps:
+  - name: 'typescript-express-ddd-example'
+    script: './src/index.ts'
+    watch: ['src']
+    ignore_watch: ['node_modules', 'src/sequelize']
+    interpreter: 'node_modules/.bin/ts-node'
+    node_args: ['--require=tsconfig-paths/register']
+    env:
+      NODE_ENV: development
