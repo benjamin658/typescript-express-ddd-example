@@ -28,14 +28,10 @@ In this example, we use the [PostgreSQL](https://www.postgresql.org/) and [Seque
 
 In order to generate an unique identity for each entity, we choose the `UUIDv4` as our identity format and `primary key` type, in the PostgreSQL, we need to install the `uuid-ossp` extension. If you launch the server by `npm run dev:up` command, the PostgreSQL container will install the extension automatically, you don't have to do anything.
 
-## PM2
+## License
 
-PM2 is an excellent process manager for Node.js application either in development or production envorinment.
+-------
 
-### Development Mode
+© Ben Hu (benjamin658), 2019-NOW
 
-In the development mode, we use the `docker volume` to attached the `src` folder to the container, and use `pm2 watch` feature to watch the src folder changed, so when we modify the code on the local host, the pm2 watch inside the container will restart the app automatically.
-
-### Production Mode
-
-PM2 can run the app in cluster mode, it starts multiple processes and load-balance HTTP/TCP/UDP queries between them. In this example, pm2 will run `max` (depend on number of CPU cores) process inside the container.
+Released under the [WTFPL License](https://github.com/benjamin658/typescript-express-ddd-example/blob/master/LICENSE)
