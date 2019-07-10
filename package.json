@@ -8,7 +8,7 @@
     "down": "docker-compose -f ./deploy/docker/prod/docker-compose.yml -p typescript-express-ddd-example down -v",
     "up:dev": "docker-compose -f ./deploy/docker/dev/docker-compose.yml -p typescript-express-ddd-example up --build",
     "down:dev": "docker-compose -f ./deploy/docker/dev/docker-compose.yml -p typescript-express-ddd-example down -v",
-    "build": "babel src --out-dir dist --extensions \".ts\" --source-maps inline",
+    "build": "rimraf dist && babel src --out-dir dist --extensions \".ts\" --source-maps inline",
     "type-check": "tsc"
   },
   "author": "Ben Hu <benjamin658gae@gmail.com>",
@@ -38,6 +38,7 @@
     "eslint-config-airbnb-base": "^13.2.0",
     "eslint-import-resolver-babel-module": "5.0.1",
     "eslint-plugin-import": "^2.18.0",
+    "rimraf": "^2.6.3",
     "sequelize-cli": "^5.5.0",
     "ts-node": "^8.3.0",
     "tsconfig-paths": "^3.8.0",
