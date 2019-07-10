@@ -14,6 +14,6 @@ ENV NODE_ENV $NODE_ENV
 
 ADD . /app
 
-ENTRYPOINT [ "./deploy/docker/dev/entry.sh" ]
+ENTRYPOINT [ "./scripts/entry.sh" ]
 
 EXPOSE 8080

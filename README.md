@@ -26,7 +26,7 @@ to build a RESTful API server in DDD way.
 
 In this example, we use the [PostgreSQL](https://www.postgresql.org/) and [Sequelize ORM](http://docs.sequelizejs.com/).
 
-In order to generate an unique identity for each entity, we choose the `UUIDv4` as our identity format and `primary key` type, in the PostgreSQL, we need to install the `uuid-ossp` extension. If you launch the server by `npm run dev:up` command, the PostgreSQL container will install the extension automatically, you don't have to do anything.
+In order to generate an unique identity for each entity, we choose the `UUIDv4` as our identity format and `primary key` type, in the PostgreSQL, we need to install the `uuid-ossp` extension. In this example, the PostgreSQL container will install the extension automatically, you don't have to do anything.
 
 ### Migration
 

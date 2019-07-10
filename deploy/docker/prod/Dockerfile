@@ -15,6 +15,6 @@ ENV NODE_ENV $NODE_ENV
 ADD . /app
 RUN npm run build
 
-ENTRYPOINT [ "./deploy/docker/prod/entry.sh" ]
+ENTRYPOINT [ "./scripts/entry.sh" ]
 
 EXPOSE 8080
