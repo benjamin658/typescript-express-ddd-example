@@ -30,8 +30,6 @@ In order to generate an unique identity for each entity, we choose the `UUIDv4` 
 
 ## License
 
--------
-
 © Ben Hu (benjamin658), 2019-NOW
 
 Released under the [WTFPL License](https://github.com/benjamin658/typescript-express-ddd-example/blob/master/LICENSE)
